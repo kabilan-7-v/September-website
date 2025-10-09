@@ -56,6 +56,7 @@ export default function NavBar() {
 
                 <HiOutlineMenuAlt2 size={30} className="m-4" onClick={()=>setIsMobileMenuOpen(true)} />
             </nav>
+            <></>
             <div 
                 className={`fixed inset-0 bg-black transition-all duration-700 ease-out z-40 md:hidden ${
                     isMobileMenuOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
