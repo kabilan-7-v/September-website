@@ -7,7 +7,7 @@ import OurApproach from "./Components/OurApproach";
 import FeaturedList from "./Components/FeaturedList";
 import CallToAction from "./Components/CallToAction";
 
-export const HomePage = () => {
+export default function HomePage (){
     return (
         <div className="bg-[#F8F7F3]">
             <NavBar />
