@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import AnnouncementCard from './AnnouncementCard';
-import heroimage from '../../../assets/image.png';
+import heroimage from '../../assets/image.png'
 
 
 const Hero = () => {
@@ -9,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto flex max-w-6xl flex-col items-center justify-between px-6 py-24 md:flex-row">
         
         {/* Left Side: Text Content */}
-        <div className="mb-12 max-w-lg text-center md:mb-0 md:w-1/2 md:text-left">
+        <div className="mb-12 max-w-8xl mt-18 text-center md:mb-0 md:w-1/2 md:text-left">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             AI <span className="underline decoration-2 underline-offset-4">research and</span>{' '}
             <span className="underline decoration-2 underline-offset-4">products that</span> put{' '}
