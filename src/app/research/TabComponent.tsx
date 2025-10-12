@@ -52,9 +52,9 @@ const TabComponent = () => {
 
 
   return (
-    <div className="w-full    font-sans bg-stone-50 p-4 sm:p-6">
+    <div className="w-full mt-28   font-sans bg-stone-50 p-4 sm:p-6">
       {/* Tab Buttons */}
-      <nav className="flex   w-screen border-b border-gray-300 pb-3 fixed top-20 bg-stone-50 z-10 p-8">
+      <nav className="flex   w-screen border-b border-gray-300 pb-3 fixed md:top-20 top-15 left-0 bg-stone-50 z-10 p-8">
         {tabs.map((tab) => (
           <button
             key={tab}

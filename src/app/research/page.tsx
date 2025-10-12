@@ -2,7 +2,7 @@ import TabComponent from "./TabComponent";
 
 export default function ResearchPage() {
   return (
-    <div className="">
+    <div className=" bg-white">
       <TabComponent/>
     </div>
   );

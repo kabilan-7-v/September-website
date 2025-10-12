@@ -109,7 +109,7 @@ export default function NavBar() {
             {/* --- Mobile Navbar and Menu (no changes here) --- */}
             {/* ... rest of your mobile code ... */}
              <nav
-                className="md:hidden flex justify-between items-center shadow-md h-[60px] fixed w-full z-40"
+                className="md:hidden flex justify-between items-center shadow-md h-[60px] fixed w-full z-40 top-0"
                 style={{ backgroundColor: Primary, color: BaseLight }}
             >
                 <div>
