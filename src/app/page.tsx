@@ -5,10 +5,15 @@ import FeaturedList from "./HomeComponents/FeaturedList";
 import Hero from "./HomeComponents/Hero";
 import OurApproach from "./HomeComponents/OurApproach";
 import VideoFeature from "./HomeComponents/VideoFeature";
+import { Primary } from "@/constant/color";
 
 export default function HomePage (){
     return (
-        <div className="bg-[#F8F7F3]">
+        <div className=""
+        style={{
+            backgroundColor:Primary
+        }}
+        >
             <Hero/>
             <AnnouncementCard/>
             <VideoFeature/>

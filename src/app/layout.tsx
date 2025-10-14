@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { inter, dm_sans, dm_mono, dm_serif_display } from './fonts';
+import './globals.css';
 import Footer from "../component/Footer";
 import NavBar from "../component/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "September Website",
@@ -27,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+       className={`${inter.variable} ${dm_sans.variable} ${dm_mono.variable} ${dm_serif_display.variable}`}
       ><NavBar/>
         <main className=" bg-amber-50">{children}</main>
         <Footer/>

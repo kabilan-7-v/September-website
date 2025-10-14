@@ -55,10 +55,10 @@ export default function NavBar() {
         <div>
             {/* Desktop Navbar */}
             <nav
-                className="h-[80px] z-50 text-black fixed top-0 w-screen hidden justify-between items-center px-8 shadow-md md:flex"
+                className="h-[80px] z-50 text-[#141413] font-[16px] fixed top-0 w-screen hidden justify-between items-center px-8  md:flex"
                 style={{
                     backgroundColor: Primary,
-                    color: BaseLight
+                    // color: BaseLight
                 }}
             >
                 <Link href="/" className="text-xl font-bold font-heading">
@@ -100,9 +100,15 @@ export default function NavBar() {
                             )}
                         </li>
                     ))}
-                    <button className="bg-black text-white rounded-xl flex items-center gap-2 hover:cursor-pointer">
+                    <div className=" flex ">
+                    <button className="bg-[#141413] h-[46px] w-[131px] text-white rounded-l-xl flex items-center gap-2 hover:cursor-pointer">
                         <p className="p-[8px] m-[6px]">Try BAP</p>
                     </button>
+                    <button className=" ml-[1px]  rounded-r-xl h-[45px} w-[48px] bg-[#141413] p-[8px] ">
+                        <ChevronDown size={16} className=" ml-[4px] transition-transform duration-300 group-hover:rotate-180" color="White" />
+
+                    </button>
+                    </div>
                 </ul>
             </nav>
 
