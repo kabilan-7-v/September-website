@@ -1,34 +1,43 @@
 import Image from 'next/image';
-import heroimage from '../../assets/image.png'
-
+import heroimage from '../../assets/image.png'; // This is fine, or move to /public
 
 const Hero = () => {
   return (
-    <section className="bg-[#efeee600] text-black font-sans">
-      <div className="container mx-auto flex max-w-6xl flex-col items-center justify-between px-6 py-24 md:flex-row">
-        
+    // REMOVED: max-h-[467px] to let content define height.
+    // FIXED: Background color was transparent.
+    <section className="bg-[#efeee6] text-black font-sans w-full">
+      <div className="container mx-auto flex flex-col items-center justify-between  py-12 md:flex-row md:py-8">
+
         {/* Left Side: Text Content */}
-        <div className="mb-12 max-w-8xl mt-18 text-center md:mb-0 md:w-1/2 md:text-left">
-          <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            AI <span className="underline decoration-2 underline-offset-4">research and</span>{' '}
-            <span className="underline decoration-2 underline-offset-4">products that</span> put{' '}
-            <span className="underline decoration-2 underline-offset-4">safety</span> at the frontier
+        {/* IMPROVED: Simplified container structure and used max-w for responsiveness. */}
+        <div className="max-w-3xl text-center md:text-left">
+          {/* IMPROVED: Mobile-first responsive font sizes. */}
+          <h1 className="text-5xl font-bold md:text-6xl">
+            AI <span className="underline">research</span>{' '}
+            <span>and</span>
+            <br />
+            <span className="underline">products</span> that put{' '}
+            <br />
+            <span>safety</span> at the frontier
           </h1>
-          <p className="mt-6 text-lg leading-relaxed">
+          
+          {/* IMPROVED: Used max-w-lg (or max-w-[609px]) for the paragraph so it can shrink. */}
+          <p className="mt-6 text-xl max-w-lg md:text-2xl">
             AI will have a vast impact on the world. Anthropic is a public benefit corporation
             dedicated to securing its benefits and mitigating its risks.
           </p>
         </div>
 
         {/* Right Side: Illustration */}
-        <div className="flex justify-center md:w-1/2">
-          {/* Make sure to place your illustration in the /public folder */}
+        <div className="mt-10 md:mt-0">
+          {/* BEST PRACTICE: Added width and height props for performance and to prevent layout shift. */}
+          {/* This also removes the need for Tailwind's w- and h- classes here. */}
           <Image
-            src={heroimage} // IMPORTANT: Replace with your image path
+            src={heroimage}
             alt="Abstract illustration of a hand holding a plant-like structure"
-            width={450}
-            height={250}
-            priority
+            width={458}
+            height={458}
+            priority // Keep this, it's great for LCP!
           />
         </div>
         

@@ -1,3 +1,4 @@
+import { Primary } from '@/constant/color';
 import Link from 'next/link';
 
 // --- Data for the list ---
@@ -49,7 +50,9 @@ const featuredItems = [
 // --- Main Component ---
 const FeaturedList = () => {
   return (
-    <section className="bg-[#F8F7F3] font-sans py-16 sm:py-20">
+    <section className="bg-[#F8F7F3] font-sans py-16 sm:py-20" style={{
+          backgroundColor:Primary
+        }}>
       <div className="container mx-auto  px-6">
         <h2 className="text-2xl font-bold text-gray-900">Featured</h2>
         <div className="mt-8 border-t border-gray-300">

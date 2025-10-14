@@ -1,3 +1,5 @@
+import { Primary } from "@/constant/color";
+
 // --- SVG Illustrations (as components) ---
 const SafetyIcon = () => (
   <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +52,11 @@ const featureCards = [
 // --- Main Component ---
 const OurApproach = () => {
   return (
-    <section className="bg-[#F8F7F3] font-sans py-20 sm:py-24">
+    <section className="bg-[#F8F7F3] font-sans py-20 sm:py-24"
+    style={{
+      backgroundColor:Primary
+    }}
+    >
       <div className="container mx-auto max-w-8xl px-6">
         
         {/* Top text section */}

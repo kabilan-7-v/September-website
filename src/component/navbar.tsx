@@ -62,7 +62,7 @@ export default function NavBar() {
                 }}
             >
                 <Link href="/" className="text-xl font-bold font-heading">
-                    September-website
+                    SEPTEMBER
                 </Link>
 
                 <ul className="flex gap-8 items-center">
@@ -100,23 +100,47 @@ export default function NavBar() {
                             )}
                         </li>
                     ))}
-                    <div className=" flex ">
-                    <button className="bg-[#141413] h-[46px] w-[131px] text-white rounded-l-xl flex items-center gap-2 hover:cursor-pointer">
-                        <p className="p-[8px] m-[6px]">Try BAP</p>
-                    </button>
-                    <button className=" ml-[1px]  rounded-r-xl h-[45px} w-[48px] bg-[#141413] p-[8px] ">
-                        <ChevronDown size={16} className=" ml-[4px] transition-transform duration-300 group-hover:rotate-180" color="White" />
+                    <li className="">
+                        {/* Button Group */}
+                        <div className="flex items-center">
+                            <button className="bg-[#141413] h-[46px] w-[131px] text-white rounded-l-xl flex items-center justify-center gap-2 hover:cursor-pointer">
+                                <p>Try BAP</p>
+                            </button>
+                            <button className="rounded-r-xl h-[46px] w-[48px] bg-[#141413] flex items-center justify-center relative group">
+                                <ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" color="White" />
+                            </button>
+                        </div>
 
-                    </button>
-                    </div>
+                        {/* Dropdown Menu for "Try BAP" */}
+                        {/* 2. Moved dropdown inside the group and adjusted positioning */}
+                        {/* <div className="absolute top-full right-0 mt-3 w-72 origin-top transform transition-all duration-300 ease-in-out scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 invisible group-hover:visible">
+                            <div className="bg-white rounded-xl shadow-lg p-6 text-black">
+                                {navItems.dropdown.map((section, index) => (
+                                    <div key={section.title} className={index > 0 ? 'mt-4 pt-4 border-t border-gray-200' : ''}>
+                                        <h3 className="font-bold text-lg mb-2">{section.title}</h3>
+                                        <ul className="flex flex-col gap-2">
+                                            {section.links.map((link) => (
+                                                <li key={link.path}>
+                                                    <Link href={link.path} className="hover:underline text-lg">
+                                                        {link.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div> */}
+                        {/* </div> */}
+                    </li>
+
                 </ul>
             </nav>
 
             {/* --- Mobile Navbar and Menu (no changes here) --- */}
             {/* ... rest of your mobile code ... */}
-             <nav
-                className="md:hidden flex justify-between items-center shadow-md h-[60px] fixed w-full z-40 top-0"
-                style={{ backgroundColor: Primary, color: BaseLight }}
+            <nav
+                className="md:hidden flex justify-between items-center shadow-md h-[60px] fixed w-full z-40 top-0 mb-18"
+                style={{ backgroundColor: Primary, color: "#141413" }}
             >
                 <div>
                     <h2 className="text-xl font-bold m-4">S/</h2>
@@ -138,7 +162,7 @@ export default function NavBar() {
             {/* Mobile Menu */}
             <div
                 style={{ backgroundColor: BaseLight }}
-                className={`fixed top-0 left-0 right-0 w-full h-screen shadow-2xl transform transition-transform duration-500 ease-in-out z-50 md:hidden ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
+                className={`fixed top-0 left-0 right-0 w-full h-screen shadow-2xl  transform transition-transform duration-500 ease-in-out z-50 md:hidden ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
             >
                 <div className="flex justify-between items-center px-6 py-4 border-b-gray-300 border-b text-black">
                     <h2 className="text-xl font-bold">September-website</h2>
@@ -182,6 +206,7 @@ export default function NavBar() {
                         ))}
                     </ul>
                 </div>
+                
             </div>
         </div>
     );

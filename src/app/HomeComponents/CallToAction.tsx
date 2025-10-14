@@ -1,8 +1,12 @@
+import { Primary } from '@/constant/color';
 import Link from 'next/link';
 
 const CallToAction = () => {
   return (
-    <section className="bg-[#F8F7F3] font-sans py-20 sm:py-24">
+    <section className="bg-[#F8F7F3] font-sans py-20 sm:py-24" 
+    style={{
+          backgroundColor:Primary
+        }}>
       <div className="container mx-auto  px-6 text-center">
         <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
           Want to help us build the future of safe AI?

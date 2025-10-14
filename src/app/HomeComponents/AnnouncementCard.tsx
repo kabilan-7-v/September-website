@@ -21,7 +21,7 @@ const AnnouncementCard = () => {
   ];
 
   return (
-    <div className="font-sans bg-[#E3DACC] p-8 sm:p-12 rounded-2xl m-8">
+    <div className="font-sans bg-[#E3DACC] p-8 sm:p-12 rounded-2xl m-8 md:m-0">
       <div className="mx-auto flex max-w-6xl flex-col md:flex-row md:gap-12">
         
         {/* Left Section */}

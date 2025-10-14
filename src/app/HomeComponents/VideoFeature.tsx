@@ -1,5 +1,6 @@
+import { Primary } from '@/constant/color';
+import videoimg from '@/assets/video.png';
 import Image from 'next/image';
-
 // --- SVG Icon Components ---
 
 const PlayIcon = () => (
@@ -32,15 +33,21 @@ const QuoteIcon = () => (
 
 const VideoFeature = () => {
   return (
-    <section className="bg-[#F8F7F3] font-sans py-20 sm:py-24">
-      <div className="container mx-auto max-w-8xl px-6">
+    <section className=" font-sans py-20 sm:py-24"
+    style={
+      {
+        backgroundColor:Primary
+      }
+    }
+    >
+      <div className="container mx-auto  ">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-5 md:gap-16">
 
           {/* Left Column: Video Thumbnail */}
           <div className="group relative cursor-pointer md:col-span-3">
             <div className="overflow-hidden rounded-xl shadow-lg">
               <Image
-                src="/video-thumbnail.jpg" // IMPORTANT: Replace with your image path
+                src={videoimg} // IMPORTANT: Replace with your image path
                 alt="A group of researchers discussing AI"
                 width={1280}
                 height={720}
@@ -48,14 +55,14 @@ const VideoFeature = () => {
               />
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-xl bg-black/10"></div>
-            <div className="absolute inset-0 flex flex-col justify-start p-8">
+            {/* <div className="absolute inset-0 flex flex-col justify-start p-8">
               <h2 className="max-w-md text-4xl font-bold leading-tight text-white sm:text-5xl">
                 Reading the mind of an AI
               </h2>
-            </div>
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            </div> */}
+            {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <PlayIcon />
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column: Quote */}
