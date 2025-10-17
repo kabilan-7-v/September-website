@@ -10,19 +10,16 @@ const Hero = () => {
 
         {/* Left Side: Text Content */}
         {/* IMPROVED: Simplified container structure and used max-w for responsiveness. */}
-        <div className="max-w-3xl text-center md:text-left">
-          {/* IMPROVED: Mobile-first responsive font sizes. */}
-          <h1 className="text-5xl font-bold md:text-6xl">
-            AI <span className="underline">research</span>{' '}
-            <span>and</span>
+        <div className="max-w-4xl text-center md:text-left">
+          <h1 className="text-5xl font-bold md:text-[68px]">
+            AI <span className="underline">research</span> <span>and</span>
             <br />
-            <span className="underline">products</span> that put{' '}
-            <br />
+            <span className="underline">products</span> that put <br />
             <span>safety</span> at the frontier
           </h1>
-          
-          {/* IMPROVED: Used max-w-lg (or max-w-[609px]) for the paragraph so it can shrink. */}
-          <p className="mt-6 text-xl max-w-lg md:text-2xl">
+
+          {/* ✨ CHANGE IS HERE: Removed max-w-lg */}
+          <p className="mt-6 text-xl md:font-[24px] max-w-[548px]">
             AI will have a vast impact on the world. Anthropic is a public benefit corporation
             dedicated to securing its benefits and mitigating its risks.
           </p>
@@ -40,7 +37,7 @@ const Hero = () => {
             priority // Keep this, it's great for LCP!
           />
         </div>
-        
+
       </div>
     </section>
   );

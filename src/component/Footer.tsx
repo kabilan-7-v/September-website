@@ -82,7 +82,7 @@ const YouTubeIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" width="20" h
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-400 font-sans">
-      <div className="container mx-auto px-6 py-16 max-w-7xl">
+      <div className="container mx-auto px-6 py-16 max-w-8xl">
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {/* Logo */}
           <div className="col-span-full mb-4 lg:col-span-1">

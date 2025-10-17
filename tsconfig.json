@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/research/Component/InterpretabilitySection.tsx", "src/app/research/Component/QuoteVideoSection.tsx"],
   "exclude": ["node_modules"]
 }

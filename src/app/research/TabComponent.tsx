@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import ResearchPapersList from './Component/ResearchPapersList';
 import ResearchSection from './Component/ResearchSection';
 import ResearchTeamsSection from './Component/ResearchTeamsSection';
+import { lightbase } from '@/constant/color';
 
 // Define the type for our tab names for better type safety
 type TabName = 'Overview' | 'Interpretability' | 'Alignment' | 'Societal Impacts';
@@ -20,19 +21,18 @@ const TabComponent = () => {
   const contentMap: Record<TabName, React.ReactNode> = {
     Overview: (
       <div className=''>
-       
-<ResearchSection/>
-<ResearchTeamsSection/>
-        <ResearchPapersList/>
+
+        <ResearchSection />
+        <ResearchTeamsSection />
+        <ResearchPapersList />
 
       </div>
     ),
     Interpretability: (
       <div>
-        <h2 className="text-2xl font-bold mb-3">Interpretability</h2>
-        <p className="mb-4 leading-relaxed">Interpretability focuses on the degree to which a human can understand the cause of a decision made by an AI model. This section delves into the methods and techniques used to make our model's predictions transparent and understandable.</p>
-        <p className="mb-4 leading-relaxed">Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
+        <ResearchPapersList />
+
+       </div>
     ),
     Alignment: (
       <div>
@@ -52,7 +52,11 @@ const TabComponent = () => {
 
 
   return (
-    <div className="w-full mt-28   font-sans bg-stone-50 p-4 sm:p-6">
+    <div className="w-full mt-28   font-sans bg-stone-50 p-4 sm:p-6"
+      style={{
+        backgroundColor: lightbase
+      }}
+    >
       {/* Tab Buttons */}
       <nav className="flex   w-screen border-b border-gray-300 pb-3 fixed md:top-20 top-15 left-0 bg-stone-50 z-10 p-8">
         {tabs.map((tab) => (
