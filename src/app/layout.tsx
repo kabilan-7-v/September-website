@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-       className={`${inter.variable} ${dm_sans.variable} ${dm_mono.variable} ${dm_serif_display.variable}`}
+       className={`${inter.variable} ${dm_sans.variable} ${dm_mono.variable} ${dm_serif_display.variable} overflow-x-hidden`}
       ><NavBar/>
-        <main className=" bg-amber-50">{children}</main>
+        <main className="bg-amber-50 overflow-x-hidden">{children}</main>
         <Footer/>
       </body>
     </html>

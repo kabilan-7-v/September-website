@@ -22,7 +22,7 @@ export default function NavBar() {
                     title: 'Initiatives',
                     links: [
                         { name: 'Transparency', path: '/transparency' },
-                        { name: 'Responsible Scaling Policy', path: '/responsible-scaling' },
+                        { name: 'Responsible Scaling Policy', path: 'news/announcing-our-updated-responsible-scaling-policy' },
                         
                     ]
                 },
@@ -56,7 +56,7 @@ export default function NavBar() {
         <div>
             {/* ---------- DESKTOP NAVBAR ---------- */}
             <nav
-                className="h-[80px] z-50 text-[#141413] font-[16px] fixed top-0 w-screen hidden justify-between items-center px-8 md:flex"
+                className="h-[80px] z-50 text-[#141413] font-[16px] fixed top-0 w-full hidden justify-between items-center px-8 md:flex"
                 style={{
                     backgroundColor: pathname == "/" ? Primary : lightbase,
                 }}
