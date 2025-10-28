@@ -15,19 +15,15 @@ export default function HomePage (){
         }}
         >
             <div className="md:max-w-[1440px]">
-                <div className="md:h-[156px] h-[96px]"> </div>
+            <div className="md:h-[156px] h-[96px]"> </div>
             <Hero/>
-                <div className="md:h-[96px] h-0"> </div>
-
+            <div className="md:h-[96px] h-0"> </div>
             <AnnouncementCard/>
             <VideoFeature/>
             <OurApproach/>
             <FeaturedList/>
             <CallToAction/>
             </div>
-
-
-
         </div>
     );
 };

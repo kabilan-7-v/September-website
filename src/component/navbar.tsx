@@ -23,6 +23,7 @@ export default function NavBar() {
                     links: [
                         { name: 'Transparency', path: '/transparency' },
                         { name: 'Responsible Scaling Policy', path: '/responsible-scaling' },
+                        
                     ]
                 },
                 {
