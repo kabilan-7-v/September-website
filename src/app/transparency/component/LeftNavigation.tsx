@@ -86,17 +86,18 @@ const LeftNavigation: React.FC<LeftNavigationProps> = ({
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
           onClick={() => setIsMobileMenuOpen(false)}
         />
-      )}
 
+      )}
+      
       {/* Navigation Sidebar */}
       <aside className={`
-        fixed lg:sticky left-0 top-20 h-screen w-64 bg-[#FBF9F6] border-r border-gray-200 
+        fixed lg:sticky left-0 top-0 lg:top-20 h-screen lg:h-[calc(100vh-5rem)] w-64 bg-[#FBF9F6] border-r border-gray-200 
         overflow-y-auto p-8 pt-8 flex-shrink-0 z-40 transition-transform duration-300
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
       <nav className='flex flex-col items-start justify-start'>
         {sections.map((section) => (
-          <div key={section.id} className="mb-8 ">
+          <div key={section.id} className="mb-8  ">
             {/* Section Number and Title - Clickable */}
             <Link 
               href={getSectionRoute(section.id)}

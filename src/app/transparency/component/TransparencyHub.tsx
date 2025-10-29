@@ -51,8 +51,8 @@ const TransparencyHub = () => {
   };
 
   return (
-    <div className="bg-[#FBF9F6]">
-      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row">
+    <div className="bg-[#FBF9F6] w-full">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-start">
         {/* Left Navigation Sidebar */}
         <LeftNavigation
           sections={navSections}
@@ -61,7 +61,7 @@ const TransparencyHub = () => {
         />
 
         {/* Main Content Area */}
-        <main className="flex-1 p-6 md:p-12 lg:p-16 pt-8 w-full ">
+        <main className="flex-1 p-6 md:p-12 lg:p-16 pt-8 w-full min-h-screen">
         {/* Model Report Section */}
         <section id="model-report" className="mb-20 scroll-mt-24">
           <div className="mb-4 text-sm text-gray-500">
