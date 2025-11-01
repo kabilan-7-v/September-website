@@ -68,18 +68,22 @@ export default function NavBar() {
                 <ul className="flex gap-8 items-center">
                     {navItems.map((item) => (
                         <li key={item.path} className="relative group">
-                            <Link
-                                href={item.path}
-                                className="relative flex items-center gap-1 py-2 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover:after:scale-x-100"
-                            >
-                                {item.name}
-                                {item.hasDropdown && (
+                            {item.hasDropdown ? (
+                                <div className="relative flex items-center gap-1 py-2 cursor-pointer transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                                    {item.name}
                                     <ChevronDown
                                         size={16}
                                         className="transition-transform duration-300 group-hover:rotate-180"
                                     />
-                                )}
-                            </Link>
+                                </div>
+                            ) : (
+                                <Link
+                                    href={item.path}
+                                    className="relative flex items-center gap-1 py-2 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-center after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover:after:scale-x-100"
+                                >
+                                    {item.name}
+                                </Link>
+                            )}
 
                             {/* Dropdown for Commitments / Learn */}
                             {item.dropdown && (

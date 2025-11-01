@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
        className={`${inter.variable} ${dm_sans.variable} ${dm_mono.variable} ${dm_serif_display.variable}`}
       ><NavBar/>
-        <main className="bg-amber-50">{children}</main>
+        <main className="">{children}</main>
         <Footer/>
       </body>
     </html>
